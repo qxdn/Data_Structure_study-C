@@ -1,0 +1,15 @@
+Status DelList(SqList &L,int x,int y)
+{
+     if(x>y)
+       return ERROR;
+     p=&(L.elem[0]);
+     k=0;
+     for(i=0;i<L.length;i++)
+         {
+           if(L.elem[i]>y||L.elem[i]<x)
+              L.elem[k++]=L.elem[i];
+           else
+              L.length--;
+         }
+     return OK;
+}

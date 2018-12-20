@@ -1,0 +1,14 @@
+Status px(LinkList &L)
+{
+     p=L->next;
+     for(;p->next!=NULL;p=p->next)
+        for(q=p->next;q!=NULL;q=q->next)
+             {
+                   if(q->data>p->data)
+                       {
+                              temp=q->data;
+	              q->data=p->data;
+                              p->data=temp;
+                       }
+             }    
+}

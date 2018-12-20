@@ -1,0 +1,15 @@
+Status px(SqList &L)
+{
+    k=0;
+    p=&L.elem[0];
+    for(int i=0;i<L.length;i++)
+     {
+          if(p[i]<0)
+            {
+                temp=p[i];
+                p[i]=p[k];
+                p[k]=temp;
+                k++;
+            }
+     }
+}

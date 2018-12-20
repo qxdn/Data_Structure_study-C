@@ -1,0 +1,10 @@
+Status ChangeList(&SqList &L)
+{
+    p=&L.elem[0];
+    for(int i=0;i<L.length/2;i++)
+     {
+           temp=p[i];
+           p[i]=p[L.length-1-i];    
+           p[L.length-1-i]=temp;   
+     }
+}

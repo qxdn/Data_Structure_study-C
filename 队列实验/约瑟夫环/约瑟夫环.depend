@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1544362467 source:f:\钱旭\武汉理工大学\数据结构\队列实验\约瑟夫环\main.c
+	<stdio.h>
+	<stdlib.h>
+

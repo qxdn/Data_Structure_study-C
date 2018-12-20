@@ -1,0 +1,18 @@
+Status DelMaxL(LinkList &L)
+{
+     p=L->next;
+     max=p->data;
+     q=L;
+     while(p)
+    {
+        if(p->next&&(p->next)->data>max)
+           {
+              q=p;
+              max=(p->next)->data;
+           }
+          p=p->next;
+    }
+     p=q->next;
+     q->next=p->next;
+     free(p);
+}

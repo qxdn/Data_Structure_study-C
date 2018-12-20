@@ -1,0 +1,11 @@
+Status ChangeDuLNode(DuLinkList &L)
+{
+     p=L;
+     q=L->next;
+     p->prior->next=q;
+     q->next->prior=p;
+     q->prior=p->prior;
+     p->next=q->next;
+     q->next=p;
+     p->prior=q;
+}
