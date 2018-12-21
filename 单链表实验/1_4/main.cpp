@@ -166,8 +166,10 @@ int main()
     print_list(La);
     printf("Lb:");
     print_list(Lb);
+    printf("La去除重复后：");
     del_reapt(La);
-     print_list(La);
+    print_list(La);
+    printf("Lb去除重复后：");
     del_reapt(Lb);
     print_list(Lb);
     mix(La,Lb,Lc);

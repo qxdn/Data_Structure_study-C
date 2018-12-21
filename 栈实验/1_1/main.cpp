@@ -82,6 +82,18 @@ int Pop(SqStack &S,int &x)
     x=*(--S.top);
     return OK;
 }
+/******************
+函数名：取栈顶元素
+参数：SqStack x int elem
+返回：OK
+*******************/
+int get_top(SqStack &S,int &elem)
+{
+    if(S.base==S.top)
+        return 0;
+    elem=*(S.top-1);
+    return OK;
+}
 int printf_Stack(SqStack &S)
 {
     int * i=S.base;
@@ -104,9 +116,10 @@ void printf_menu(void)
     printf("2、插入栈\n");
     printf("3、出栈\n");
     printf("4、清空栈\n");
-    printf("5、打印栈的元素\n");
-    printf("6、销毁栈\n");
-    printf("7、退出\n");
+    printf("5、取栈顶元素\n");
+    printf("6、打印栈的元素\n");
+    printf("7、销毁栈\n");
+    printf("8、退出\n");
 }
 int main()
 {
@@ -114,7 +127,7 @@ int main()
     int n,i;
     printf_menu();
     scanf("%d",&i);
-    while(i!=7)
+    while(i!=8)
     {
         switch (i)
         {
@@ -145,10 +158,16 @@ int main()
         }
         case 5:
         {
-            printf_Stack(S);
+            get_top(S,n);
+            printf("栈顶元素是：%d\n",n);
             break;
         }
         case 6:
+        {
+            printf_Stack(S);
+            break;
+        }
+        case 7:
             destory_Stack(S);
             break;
         }

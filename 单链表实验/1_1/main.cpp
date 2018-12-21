@@ -17,7 +17,7 @@ int print_list(Linklist &L)
         printf("还未初始化，请初始化链表\n");
         return ERROR;
     }
-    printf("该链表的位置为:\n");
+    printf("该链表的输出为:\n");
     p=L->next;
     while(p)
     {

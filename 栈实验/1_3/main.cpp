@@ -199,6 +199,7 @@ int t_n(int n)
 int main()
 {
     int n;
+    printf("请输入要计算的值\n");
     scanf("%d",&n);
     printf("递归的结果：%d\n",t_n(n));
     printf("栈的结果：%d\n",cal_t(n));
