@@ -209,7 +209,7 @@ void head_adjust(SqList &L,int s, int m)
 void headsort(SqList &L)
 {
     int i;
-    for(i=L.length/2-1; i>=0; i--)      //从最后一个非终端节点开始
+    for(i=L.length/2-1; i>=0; i--)      //从最后一个非终端节点开始，建立一个大顶堆
         head_adjust(L,i,L.length);
     for(i=L.length-1; i>0; i--)
     {

@@ -36,17 +36,26 @@ int CreatBiTree(BiTree &T)
 int count_one(BiTree &T)
 {
     int count_d=0;
+    if(T)
+    {
     if(T->lchild&&!T->rchild)
     {
         count_d++;
-        count_d+=count_one(T->lchild);
+     //   count_d+=count_one(T->lchild);
     }
     else if(!T->lchild&&T->rchild)
     {
         count_d++;
-        count_d+=count_one(T->rchild);
+     //   count_d+=count_one(T->rchild);
     }
+    if(!T->lchild&&!T->rchild)
+        return 0;
+    count_d+=count_one(T->lchild);          //修复根节点树满出错的问题
+    count_d+=count_one(T->rchild);
     return count_d;
+    }
+    else
+        return 0;
 }
 
 int main()
