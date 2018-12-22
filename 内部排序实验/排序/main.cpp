@@ -67,7 +67,7 @@ void insertsort(SqList &L)
         temp=L.Elem[i];                 //暂时保存最后一项即插入项
         for(j=i; j>0; j--)
         {
-            if(temp<L.Elem[j-1])     //如果插入项大于当前项后移
+            if(temp<L.Elem[j-1])     //如果插入项小于当前项后移
             {
                 L.Elem[j]=L.Elem[j-1];
             }
@@ -94,11 +94,11 @@ void Bubble_sort(SqList &L)
 {
     int i,j;
     for(i=0; i<L.length-1; i++)
-        for(j=i+1; j<L.length; j++)
+        for(j=0; j<L.length-1-i; j++)
         {
-            if(L.Elem[i]>L.Elem[j])
+            if(L.Elem[j]>L.Elem[j+1])
             {
-                swap_sqlist(&L.Elem[i],&L.Elem[j]);
+                swap_sqlist(&L.Elem[j],&L.Elem[j+1]);
             }
         }
 }

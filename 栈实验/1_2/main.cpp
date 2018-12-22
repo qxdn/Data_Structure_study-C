@@ -190,8 +190,8 @@ int operate(elem2 a,elem theta,elem2 b)
     }
 }
 /******************
-功能：检测语法
-参数：字符串首地址
+功能：计算
+参数：void
 *****************/
 int Make_str(void)
 {

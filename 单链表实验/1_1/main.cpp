@@ -8,6 +8,9 @@ typedef struct List
     int data;
     struct List* next;
 } ListNode,*Linklist;
+/**************************
+打印链表元素
+******************************/
 int print_list(Linklist &L)
 {
     Linklist p=NULL;
@@ -27,6 +30,9 @@ int print_list(Linklist &L)
     }
     return OK;
 }
+/**********************
+链表初始化
+***********************/
 int List_Init(Linklist &L)
 {
     if(L==NULL)
@@ -50,6 +56,9 @@ int List_Init(Linklist &L)
         return OK;
     }
 }
+/******************************
+插入节点
+******************************/
 int insert_Node(Linklist &L)
 {
     Linklist p=NULL,new_node=NULL;
@@ -79,6 +88,9 @@ int insert_Node(Linklist &L)
     printf("插入完成\n");
     return OK;
 }
+/*******************
+删除节点
+******************/
 int del_node(Linklist &L)
 {
     Linklist p=NULL,temp=NULL;

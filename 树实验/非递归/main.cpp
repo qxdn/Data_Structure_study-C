@@ -83,7 +83,7 @@ int CreatBiTree(BiTree &T)
     return OK;
 }
 /*************
-非递归遍历
+非递归遍历 后序
 **************/
 int inordertraverse(BiTree T)
 {
